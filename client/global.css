@@ -19,7 +19,7 @@
     --popover: 255 255 255;
     --popover-foreground: 17 24 39;
 
-    --primary: 79 70 229;
+    --primary: 0 179 65;
     --primary-foreground: 255 255 255;
 
     --secondary: 248 250 252;
@@ -36,16 +36,16 @@
 
     --border: 226 232 240;
     --input: 226 232 240;
-    --ring: 79 70 229;
+    --ring: 0 179 65;
 
     --radius: 0.5rem;
 
-    /* OMONORMI Brand Colors - Clean Professional Palette */
-    --brand-purple: 79 70 229;
-    --brand-yellow: 251 191 36;
-    --brand-green: 34 197 94;
-    --brand-orange: 249 115 22;
-    --brand-teal: 20 184 166;
+    /* OMONORMI Brand Colors - Shopify Inspired Palette */
+    --brand-primary: 0 179 65;
+    --brand-secondary: 108 117 125;
+    --brand-accent: 79 70 229;
+    --brand-success: 34 197 94;
+    --brand-neutral: 99 115 129;
 
     /* Shopify Polaris Theme - Clean Version */
     --polaris-surface: 255 255 255;
@@ -75,7 +75,7 @@
     --popover: 30 41 59;
     --popover-foreground: 248 250 252;
 
-    --primary: 129 140 248;
+    --primary: 74 222 128;
     --primary-foreground: 15 23 42;
 
     --secondary: 51 65 85;
@@ -92,14 +92,14 @@
 
     --border: 51 65 85;
     --input: 51 65 85;
-    --ring: 129 140 248;
+    --ring: 74 222 128;
 
-    /* OMONORMI Brand Colors - Dark Mode */
-    --brand-purple: 129 140 248;
-    --brand-yellow: 253 224 71;
-    --brand-green: 74 222 128;
-    --brand-orange: 251 146 60;
-    --brand-teal: 45 212 191;
+    /* OMONORMI Brand Colors - Shopify Dark Mode */
+    --brand-primary: 74 222 128;
+    --brand-secondary: 148 163 184;
+    --brand-accent: 129 140 248;
+    --brand-success: 74 222 128;
+    --brand-neutral: 148 163 184;
 
     /* Shopify Polaris Dark Theme */
     --polaris-surface: 30 41 59;
