@@ -9,6 +9,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import { PlaceholderPage } from "./pages/PlaceholderPage";
+import { BagsPage } from "./pages/BagsPage";
+import { JewelryPage } from "./pages/JewelryPage";
+import { CraftsPage } from "./pages/CraftsPage";
+import { PerfumesPage } from "./pages/PerfumesPage";
 
 const queryClient = new QueryClient();
 
@@ -20,42 +24,10 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route
-            path="/bags"
-            element={
-              <PlaceholderPage
-                title="Hand Bags Collection"
-                description="Discover our beautiful collection of handcrafted bags, each designed with care and attention to detail."
-              />
-            }
-          />
-          <Route
-            path="/crafts"
-            element={
-              <PlaceholderPage
-                title="DIY Crafts & Accessories"
-                description="Explore our unique DIY crafts and accessories that showcase traditional artistry with modern style."
-              />
-            }
-          />
-          <Route
-            path="/perfumes"
-            element={
-              <PlaceholderPage
-                title="Perfumes Collection"
-                description="Experience our curated selection of elegant perfumes that complement your unique style."
-              />
-            }
-          />
-          <Route
-            path="/jewelry"
-            element={
-              <PlaceholderPage
-                title="Jewelry Collection"
-                description="Adorn yourself with our exquisite handcrafted jewelry pieces that tell your story."
-              />
-            }
-          />
+          <Route path="/bags" element={<BagsPage />} />
+          <Route path="/crafts" element={<CraftsPage />} />
+          <Route path="/perfumes" element={<PerfumesPage />} />
+          <Route path="/jewelry" element={<JewelryPage />} />
           <Route
             path="/contact"
             element={
