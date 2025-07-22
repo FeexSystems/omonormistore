@@ -4,6 +4,8 @@ import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import { Star, Heart, ShoppingCart } from "lucide-react";
 import { Product } from "@shared/products";
+import { useCart } from "@/contexts/CartContext";
+import { useState } from "react";
 
 interface ProductCardProps {
   product: Product;
@@ -11,9 +13,26 @@ interface ProductCardProps {
 }
 
 export function ProductCard({ product, showAddToCart = true }: ProductCardProps) {
-  const discountPercentage = product.originalPrice 
+  const { addItem, openCart } = useCart();
+  const [isAdding, setIsAdding] = useState(false);
+
+  const discountPercentage = product.originalPrice
     ? Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)
     : 0;
+
+  const handleAddToCart = async (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (!product.inStock || isAdding) return;
+
+    setIsAdding(true);
+    addItem(product);
+
+    // Visual feedback
+    setTimeout(() => {
+      setIsAdding(false);
+      openCart();
+    }, 300);
+  };
 
   return (
     <Card className="group hover:shadow-xl transition-all duration-300 overflow-hidden">
@@ -124,13 +143,11 @@ export function ProductCard({ product, showAddToCart = true }: ProductCardProps)
                 size="sm" 
                 className="bg-brand-purple hover:bg-brand-purple/90"
                 disabled={!product.inStock}
-                onClick={(e) => {
-                  e.preventDefault();
-                  // Add cart functionality here
-                }}
+                onClick={handleAddToCart}
+                disabled={isAdding || !product.inStock}
               >
                 <ShoppingCart className="h-4 w-4 mr-1" />
-                {product.inStock ? 'Add to Cart' : 'Out of Stock'}
+                {isAdding ? 'Adding...' : product.inStock ? 'Add to Cart' : 'Out of Stock'}
               </Button>
             )}
           </div>
