@@ -118,7 +118,7 @@ export default function Index() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <Link to="/bags">
               <Card className="group hover:shadow-lg transition-all duration-300 hover:scale-105 border-polaris-divider overflow-hidden">
-                <div className="aspect-square bg-gradient-to-br from-brand-purple/5 to-brand-purple/10 relative overflow-hidden">
+                <div className="aspect-square bg-gradient-to-br from-brand-primary/5 to-brand-primary/10 relative overflow-hidden">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2Fc516c86f7053422db52db417d05f51ea%2Fc10aed1f939649be9bec32acc7696259?format=webp&width=800"
                     alt="Hand Bags Collection"
@@ -127,7 +127,7 @@ export default function Index() {
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
                 </div>
                 <CardHeader className="text-center space-y-2">
-                  <CardTitle className="text-xl group-hover:text-brand-purple transition-colors">Hand Bags</CardTitle>
+                  <CardTitle className="text-xl group-hover:text-brand-primary transition-colors">Hand Bags</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-center">
@@ -139,7 +139,7 @@ export default function Index() {
 
             <Link to="/crafts">
               <Card className="group hover:shadow-lg transition-all duration-300 hover:scale-105 border-polaris-divider overflow-hidden">
-                <div className="aspect-square bg-gradient-to-br from-brand-yellow/5 to-brand-yellow/10 relative overflow-hidden">
+                <div className="aspect-square bg-gradient-to-br from-brand-success/5 to-brand-success/10 relative overflow-hidden">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2Fc516c86f7053422db52db417d05f51ea%2F2664345753ef4e4699b15d2c6b30115a?format=webp&width=800"
                     alt="DIY Crafts Collection"
@@ -148,7 +148,7 @@ export default function Index() {
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
                 </div>
                 <CardHeader className="text-center space-y-2">
-                  <CardTitle className="text-xl group-hover:text-brand-yellow transition-colors">DIY Crafts</CardTitle>
+                  <CardTitle className="text-xl group-hover:text-brand-success transition-colors">DIY Crafts</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-center">
@@ -160,7 +160,7 @@ export default function Index() {
 
             <Link to="/perfumes">
               <Card className="group hover:shadow-lg transition-all duration-300 hover:scale-105 border-polaris-divider overflow-hidden">
-                <div className="aspect-square bg-gradient-to-br from-brand-teal/5 to-brand-teal/10 relative overflow-hidden">
+                <div className="aspect-square bg-gradient-to-br from-brand-accent/5 to-brand-accent/10 relative overflow-hidden">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2Fc516c86f7053422db52db417d05f51ea%2F6d4953e6d8bc4826b5adc3bd7ed3d70c?format=webp&width=800"
                     alt="Perfumes Collection"
@@ -169,7 +169,7 @@ export default function Index() {
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
                 </div>
                 <CardHeader className="text-center space-y-2">
-                  <CardTitle className="text-xl group-hover:text-brand-teal transition-colors">Perfumes</CardTitle>
+                  <CardTitle className="text-xl group-hover:text-brand-accent transition-colors">Perfumes</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-center">
@@ -181,7 +181,7 @@ export default function Index() {
 
             <Link to="/jewelry">
               <Card className="group hover:shadow-lg transition-all duration-300 hover:scale-105 border-polaris-divider overflow-hidden">
-                <div className="aspect-square bg-gradient-to-br from-brand-orange/5 to-brand-orange/10 relative overflow-hidden">
+                <div className="aspect-square bg-gradient-to-br from-brand-secondary/5 to-brand-secondary/10 relative overflow-hidden">
                   <img
                     src="https://cdn.builder.io/api/v1/image/assets%2Fc516c86f7053422db52db417d05f51ea%2F2833a88f274e46d9ab34d7e880537b1c?format=webp&width=800"
                     alt="Jewelry Collection"
@@ -190,7 +190,7 @@ export default function Index() {
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300"></div>
                 </div>
                 <CardHeader className="text-center space-y-2">
-                  <CardTitle className="text-xl group-hover:text-brand-orange transition-colors">Jewelry</CardTitle>
+                  <CardTitle className="text-xl group-hover:text-brand-secondary transition-colors">Jewelry</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <CardDescription className="text-center">
