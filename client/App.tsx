@@ -14,7 +14,9 @@ import { JewelryPage } from "./pages/JewelryPage";
 import { CraftsPage } from "./pages/CraftsPage";
 import { PerfumesPage } from "./pages/PerfumesPage";
 import { CartProvider } from "./contexts/CartContext";
+import { WishlistProvider } from "./contexts/WishlistContext";
 import { CartSidebar } from "./components/CartSidebar";
+import { WishlistSidebar } from "./components/WishlistSidebar";
 
 const queryClient = new QueryClient();
 
@@ -22,10 +24,12 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <CartProvider>
-        <Toaster />
-        <Sonner />
-        <CartSidebar />
-        <BrowserRouter>
+        <WishlistProvider>
+          <Toaster />
+          <Sonner />
+          <CartSidebar />
+          <WishlistSidebar />
+          <BrowserRouter>
           <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/bags" element={<BagsPage />} />
@@ -52,8 +56,9 @@ const App = () => (
           />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
+            </Routes>
+          </BrowserRouter>
+        </WishlistProvider>
       </CartProvider>
     </TooltipProvider>
   </QueryClientProvider>
