@@ -11,11 +11,11 @@ export function PerfumesPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-brand-teal/10 to-brand-purple/10 py-16">
+      <section className="bg-gradient-to-r from-brand-accent/10 to-brand-primary/10 py-16">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4">
             <div className="flex justify-center mb-4">
-              <div className="w-16 h-16 bg-brand-teal rounded-full flex items-center justify-center">
+              <div className="w-16 h-16 bg-brand-accent rounded-full flex items-center justify-center">
                 <Heart className="h-8 w-8 text-white" />
               </div>
             </div>
@@ -26,7 +26,7 @@ export function PerfumesPage() {
               Carefully curated fragrances that complement your personal aesthetic. 
               Our perfume collection is coming soon with exclusive scents.
             </p>
-            <Badge className="bg-brand-teal/10 text-brand-teal border-brand-teal/20">
+            <Badge className="bg-brand-accent/10 text-brand-accent border-brand-accent/20">
               Coming Soon
             </Badge>
           </div>
@@ -50,8 +50,8 @@ export function PerfumesPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-12">
               <div className="text-center space-y-3">
-                <div className="w-16 h-16 bg-brand-teal/10 rounded-full flex items-center justify-center mx-auto">
-                  <Heart className="h-8 w-8 text-brand-teal" />
+                <div className="w-16 h-16 bg-brand-accent/10 rounded-full flex items-center justify-center mx-auto">
+                  <Heart className="h-8 w-8 text-brand-accent" />
                 </div>
                 <h3 className="font-semibold">Natural Ingredients</h3>
                 <p className="text-sm text-polaris-text-subdued">
@@ -60,8 +60,8 @@ export function PerfumesPage() {
               </div>
               
               <div className="text-center space-y-3">
-                <div className="w-16 h-16 bg-brand-purple/10 rounded-full flex items-center justify-center mx-auto">
-                  <Heart className="h-8 w-8 text-brand-purple" />
+                <div className="w-16 h-16 bg-brand-primary/10 rounded-full flex items-center justify-center mx-auto">
+                  <Heart className="h-8 w-8 text-brand-primary" />
                 </div>
                 <h3 className="font-semibold">Artisan Crafted</h3>
                 <p className="text-sm text-polaris-text-subdued">
@@ -70,8 +70,8 @@ export function PerfumesPage() {
               </div>
               
               <div className="text-center space-y-3">
-                <div className="w-16 h-16 bg-brand-yellow/10 rounded-full flex items-center justify-center mx-auto">
-                  <Heart className="h-8 w-8 text-brand-yellow" />
+                <div className="w-16 h-16 bg-brand-success/10 rounded-full flex items-center justify-center mx-auto">
+                  <Heart className="h-8 w-8 text-brand-success" />
                 </div>
                 <h3 className="font-semibold">Unique Scents</h3>
                 <p className="text-sm text-polaris-text-subdued">
@@ -92,7 +92,7 @@ export function PerfumesPage() {
                   placeholder="Enter your email" 
                   className="flex-1 px-4 py-2 border border-polaris-divider rounded-md focus:outline-none focus:ring-2 focus:ring-brand-teal"
                 />
-                <Button className="bg-brand-teal hover:bg-brand-teal/90">
+                <Button className="bg-brand-accent hover:bg-brand-accent/90">
                   Notify Me
                 </Button>
               </div>
