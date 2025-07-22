@@ -24,7 +24,7 @@ export function CartSidebar() {
             <ShoppingBag className="h-5 w-5" />
             <h2 className="text-lg font-semibold">Shopping Cart</h2>
             {state.items.length > 0 && (
-              <Badge className="bg-brand-purple">
+              <Badge className="bg-brand-primary">
                 {state.items.reduce((total, item) => total + item.quantity, 0)}
               </Badge>
             )}
@@ -45,7 +45,7 @@ export function CartSidebar() {
               <p className="text-polaris-text-subdued mb-4">
                 Add some beautiful OMONORMI pieces to get started!
               </p>
-              <Button onClick={closeCart} className="bg-brand-purple hover:bg-brand-purple/90">
+              <Button onClick={closeCart} className="bg-brand-primary hover:bg-brand-primary/90">
                 Continue Shopping
               </Button>
             </div>
@@ -78,7 +78,7 @@ export function CartSidebar() {
                     )}
 
                     {/* Price */}
-                    <div className="text-sm font-semibold text-brand-purple mb-2">
+                    <div className="text-sm font-semibold text-brand-primary mb-2">
                       ${item.product.price}
                     </div>
 
@@ -128,12 +128,12 @@ export function CartSidebar() {
             {/* Total */}
             <div className="flex items-center justify-between text-lg font-semibold">
               <span>Total:</span>
-              <span className="text-brand-purple">${getTotalPrice().toFixed(2)}</span>
+              <span className="text-brand-primary">${getTotalPrice().toFixed(2)}</span>
             </div>
 
             {/* Checkout Button */}
             <Button 
-              className="w-full bg-brand-purple hover:bg-brand-purple/90"
+              className="w-full bg-brand-primary hover:bg-brand-primary/90"
               size="lg"
             >
               Checkout
