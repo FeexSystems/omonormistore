@@ -5,6 +5,7 @@ import { Badge } from "./ui/badge";
 import { Star, Heart, ShoppingCart } from "lucide-react";
 import { Product } from "@shared/products";
 import { useCart } from "@/contexts/CartContext";
+import { useWishlist } from "@/contexts/WishlistContext";
 import { useState } from "react";
 
 interface ProductCardProps {
@@ -14,7 +15,9 @@ interface ProductCardProps {
 
 export function ProductCard({ product, showAddToCart = true }: ProductCardProps) {
   const { addItem, openCart } = useCart();
+  const { addItem: addToWishlist, removeItem: removeFromWishlist, isInWishlist } = useWishlist();
   const [isAdding, setIsAdding] = useState(false);
+  const [isWishlistAction, setIsWishlistAction] = useState(false);
 
   const discountPercentage = product.originalPrice
     ? Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100)
@@ -31,6 +34,24 @@ export function ProductCard({ product, showAddToCart = true }: ProductCardProps)
     setTimeout(() => {
       setIsAdding(false);
       openCart();
+    }, 300);
+  };
+
+  const handleWishlistToggle = async (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (isWishlistAction) return;
+
+    setIsWishlistAction(true);
+
+    if (isInWishlist(product.id)) {
+      removeFromWishlist(product.id);
+    } else {
+      addToWishlist(product);
+    }
+
+    // Visual feedback
+    setTimeout(() => {
+      setIsWishlistAction(false);
     }, 300);
   };
 
@@ -65,12 +86,10 @@ export function ProductCard({ product, showAddToCart = true }: ProductCardProps)
               variant="ghost" 
               size="sm" 
               className="bg-white/80 hover:bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-              onClick={(e) => {
-                e.preventDefault();
-                // Add wishlist functionality here
-              }}
+              onClick={handleWishlistToggle}
+              disabled={isWishlistAction}
             >
-              <Heart className="h-4 w-4" />
+              <Heart className={`h-4 w-4 ${isInWishlist(product.id) ? 'fill-red-500 text-red-500' : ''}`} />
             </Button>
           </div>
         </div>
