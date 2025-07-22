@@ -98,7 +98,7 @@ export function ProductCard({ product, showAddToCart = true }: ProductCardProps)
       <CardContent className="p-4">
         <div className="space-y-3">
           <Link to={`/product/${product.id}`}>
-            <h3 className="text-lg font-semibold group-hover:text-brand-purple transition-colors line-clamp-2">
+            <h3 className="text-lg font-semibold group-hover:text-brand-primary transition-colors line-clamp-2">
               {product.name}
             </h3>
           </Link>
@@ -110,7 +110,7 @@ export function ProductCard({ product, showAddToCart = true }: ProductCardProps)
                 key={i} 
                 className={`h-4 w-4 ${
                   i < Math.floor(product.rating) 
-                    ? 'fill-brand-yellow text-brand-yellow' 
+                    ? 'fill-brand-success text-brand-success' 
                     : 'text-gray-200'
                 }`} 
               />
@@ -133,7 +133,7 @@ export function ProductCard({ product, showAddToCart = true }: ProductCardProps)
                 {product.colors.slice(0, 3).map((color, index) => (
                   <div
                     key={index}
-                    className="w-4 h-4 rounded-full border border-gray-200 bg-gradient-to-r from-brand-yellow to-brand-orange"
+                    className="w-4 h-4 rounded-full border border-gray-200 bg-gradient-to-r from-brand-success to-brand-primary"
                     title={color}
                   />
                 ))}
@@ -147,7 +147,7 @@ export function ProductCard({ product, showAddToCart = true }: ProductCardProps)
           {/* Price and Add to Cart */}
           <div className="flex items-center justify-between pt-2">
             <div className="flex items-center space-x-2">
-              <span className="text-xl font-bold text-brand-purple">
+              <span className="text-xl font-bold text-brand-primary">
                 ${product.price}
               </span>
               {product.originalPrice && (
@@ -160,7 +160,7 @@ export function ProductCard({ product, showAddToCart = true }: ProductCardProps)
             {showAddToCart && (
               <Button 
                 size="sm" 
-                className="bg-brand-purple hover:bg-brand-purple/90"
+                className="bg-brand-primary hover:bg-brand-primary/90"
                 disabled={!product.inStock}
                 onClick={handleAddToCart}
                 disabled={isAdding || !product.inStock}
