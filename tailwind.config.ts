@@ -57,6 +57,21 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        brand: {
+          purple: "hsl(var(--brand-purple))",
+          yellow: "hsl(var(--brand-yellow))",
+          green: "hsl(var(--brand-green))",
+          orange: "hsl(var(--brand-orange))",
+          teal: "hsl(var(--brand-teal))",
+        },
+        polaris: {
+          surface: "hsl(var(--polaris-surface))",
+          "surface-hovered": "hsl(var(--polaris-surface-hovered))",
+          "surface-pressed": "hsl(var(--polaris-surface-pressed))",
+          "surface-subdued": "hsl(var(--polaris-surface-subdued))",
+          "text-subdued": "hsl(var(--polaris-text-subdued))",
+          divider: "hsl(var(--polaris-divider))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
