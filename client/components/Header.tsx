@@ -79,7 +79,7 @@ export function Header() {
                 <Input
                   type="search"
                   placeholder="Search products..."
-                  className="pl-10 pr-4 py-2 w-full border-polaris-divider focus:border-brand-purple focus:ring-brand-purple cursor-pointer"
+                  className="pl-10 pr-4 py-2 w-full border-polaris-divider focus:border-brand-primary focus:ring-brand-primary cursor-pointer"
                   onClick={() => setIsSearchOpen(true)}
                   readOnly
                 />
@@ -126,7 +126,7 @@ export function Header() {
                 <ShoppingBag className="h-5 w-5" />
                 <span className="hidden md:block ml-2">Cart</span>
                 {getTotalItems() > 0 && (
-                  <span className="absolute -top-1 -right-1 bg-brand-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                  <span className="absolute -top-1 -right-1 bg-brand-primary text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
                     {getTotalItems()}
                   </span>
                 )}
@@ -142,7 +142,7 @@ export function Header() {
             <Input
               type="search"
               placeholder="Search products..."
-              className="pl-10 pr-4 py-2 w-full border-polaris-divider focus:border-brand-purple focus:ring-brand-purple cursor-pointer"
+              className="pl-10 pr-4 py-2 w-full border-polaris-divider focus:border-brand-primary focus:ring-brand-primary cursor-pointer"
               onClick={() => setIsSearchOpen(true)}
               readOnly
             />
