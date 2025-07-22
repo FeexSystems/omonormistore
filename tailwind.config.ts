@@ -57,12 +57,18 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        shopify: {
+          green: "hsl(var(--brand-primary))",
+          "green-light": "hsl(var(--brand-success))",
+          gray: "hsl(var(--brand-secondary))",
+          "gray-light": "hsl(var(--polaris-surface-subdued))",
+        },
         brand: {
-          purple: "hsl(var(--brand-purple))",
-          yellow: "hsl(var(--brand-yellow))",
-          green: "hsl(var(--brand-green))",
-          orange: "hsl(var(--brand-orange))",
-          teal: "hsl(var(--brand-teal))",
+          primary: "hsl(var(--brand-primary))",
+          secondary: "hsl(var(--brand-secondary))",
+          accent: "hsl(var(--brand-accent))",
+          success: "hsl(var(--brand-success))",
+          neutral: "hsl(var(--brand-neutral))",
         },
         polaris: {
           surface: "hsl(var(--polaris-surface))",
