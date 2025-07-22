@@ -54,7 +54,7 @@ export function WishlistSidebar() {
               <p className="text-polaris-text-subdued mb-4">
                 Add some beautiful OMONORMI pieces to save for later!
               </p>
-              <Button onClick={closeWishlist} className="bg-brand-purple hover:bg-brand-purple/90">
+              <Button onClick={closeWishlist} className="bg-brand-primary hover:bg-brand-primary/90">
                 Continue Shopping
               </Button>
             </div>
@@ -76,7 +76,7 @@ export function WishlistSidebar() {
                   {/* Product Details */}
                   <div className="flex-1 min-w-0">
                     <Link to={`/product/${product.id}`} onClick={closeWishlist}>
-                      <h4 className="font-semibold text-sm line-clamp-2 mb-1 hover:text-brand-purple transition-colors">
+                      <h4 className="font-semibold text-sm line-clamp-2 mb-1 hover:text-brand-primary transition-colors">
                         {product.name}
                       </h4>
                     </Link>
@@ -88,7 +88,7 @@ export function WishlistSidebar() {
                           key={i} 
                           className={`h-3 w-3 ${
                             i < Math.floor(product.rating) 
-                              ? 'fill-brand-yellow text-brand-yellow' 
+                              ? 'fill-brand-success text-brand-success' 
                               : 'text-gray-200'
                           }`} 
                         />
@@ -99,7 +99,7 @@ export function WishlistSidebar() {
                     </div>
 
                     {/* Price */}
-                    <div className="text-sm font-semibold text-brand-purple mb-3">
+                    <div className="text-sm font-semibold text-brand-primary mb-3">
                       ${product.price}
                       {product.originalPrice && (
                         <span className="text-xs text-polaris-text-subdued line-through ml-2">
@@ -112,7 +112,7 @@ export function WishlistSidebar() {
                     <div className="flex items-center justify-between">
                       <Button
                         size="sm"
-                        className="bg-brand-purple hover:bg-brand-purple/90 text-xs"
+                        className="bg-brand-primary hover:bg-brand-primary/90 text-xs"
                         disabled={!product.inStock}
                         onClick={() => handleAddToCart(product)}
                       >
@@ -140,7 +140,7 @@ export function WishlistSidebar() {
         {state.items.length > 0 && (
           <div className="border-t border-polaris-divider p-6 space-y-4">
             <Button 
-              className="w-full bg-brand-purple hover:bg-brand-purple/90"
+              className="w-full bg-brand-primary hover:bg-brand-primary/90"
               size="lg"
               onClick={() => {
                 // Add all wishlist items to cart
