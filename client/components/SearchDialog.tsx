@@ -78,7 +78,7 @@ export function SearchDialog({ open, onOpenChange }: SearchDialogProps) {
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
               onKeyDown={handleKeyDown}
-              className="pl-10 pr-10 py-3 text-lg border-polaris-divider focus:border-brand-purple focus:ring-brand-purple"
+              className="pl-10 pr-10 py-3 text-lg border-polaris-divider focus:border-brand-primary focus:ring-brand-primary"
               autoFocus
             />
             {inputValue && (
@@ -149,7 +149,7 @@ export function SearchDialog({ open, onOpenChange }: SearchDialogProps) {
           ) : isSearching ? (
             // Loading state
             <div className="p-6 text-center">
-              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-brand-purple mx-auto mb-4"></div>
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-brand-primary mx-auto mb-4"></div>
               <p className="text-polaris-text-subdued">Searching...</p>
             </div>
           ) : hasResults ? (
@@ -181,7 +181,7 @@ export function SearchDialog({ open, onOpenChange }: SearchDialogProps) {
                         {product.description}
                       </p>
                       <div className="flex items-center space-x-2">
-                        <span className="font-semibold text-brand-purple">
+                        <span className="font-semibold text-brand-primary">
                           ${product.price}
                         </span>
                         <Badge variant="secondary" className="text-xs">
