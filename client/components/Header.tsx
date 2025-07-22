@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ShoppingBag, Search, User, Menu, Heart } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
+import { Logo } from "./Logo";
 
 export function Header() {
   return (
@@ -33,14 +34,7 @@ export function Header() {
             </button>
 
             {/* Logo */}
-            <Link to="/" className="flex-shrink-0">
-              <div className="text-center">
-                <h1 className="text-2xl md:text-3xl font-bold text-brand-purple">
-                  OMONORMI
-                </h1>
-                <p className="text-xs text-polaris-text-subdued">by Bertha Edede</p>
-              </div>
-            </Link>
+            <Logo />
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
