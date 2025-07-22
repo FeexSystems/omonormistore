@@ -5,8 +5,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Star, ShoppingBag, Heart, ArrowRight, Sparkles, Award, Users, Truck } from "lucide-react";
 import { Link } from "react-router-dom";
+import { getFeaturedProducts } from "@shared/products";
+import { ProductGrid } from "@/components/ProductGrid";
 
 export default function Index() {
+  const featuredProducts = getFeaturedProducts();
+
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -207,121 +211,7 @@ export default function Index() {
             <p className="text-lg text-polaris-text-subdued">Handpicked favorites from our collection</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Product Card 1 */}
-            <Card className="group hover:shadow-xl transition-all duration-300 overflow-hidden">
-              <div className="aspect-square bg-gradient-to-br from-brand-purple/5 to-brand-yellow/5 relative overflow-hidden">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2Fc516c86f7053422db52db417d05f51ea%2Fdfa9fd9873d64a1085ebc7bd2c217a3a?format=webp&width=800"
-                  alt="Traditional Kente Tote Bag"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                />
-                <div className="absolute top-4 right-4">
-                  <Button variant="ghost" size="sm" className="bg-white/80 hover:bg-white">
-                    <Heart className="h-4 w-4" />
-                  </Button>
-                </div>
-              </div>
-              <CardContent className="p-6">
-                <div className="space-y-3">
-                  <h3 className="text-lg font-semibold group-hover:text-brand-purple transition-colors">
-                    Traditional Kente Tote Bag
-                  </h3>
-                  <div className="flex items-center space-x-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-brand-yellow text-brand-yellow" />
-                    ))}
-                    <span className="text-sm text-polaris-text-subdued ml-2">(24 reviews)</span>
-                  </div>
-                  <p className="text-polaris-text-subdued text-sm">
-                    Authentic Kente cloth tote with vibrant patterns and sturdy construction
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-xl font-bold text-brand-purple">$89</span>
-                    <Button size="sm" className="bg-brand-purple hover:bg-brand-purple/90">
-                      Add to Cart
-                    </Button>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Product Card 2 */}
-            <Card className="group hover:shadow-xl transition-all duration-300 overflow-hidden">
-              <div className="aspect-square bg-gradient-to-br from-brand-teal/5 to-brand-orange/5 relative overflow-hidden">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2Fc516c86f7053422db52db417d05f51ea%2F1940a02b2a5e4b1596ce858dfe43ccb9?format=webp&width=800"
-                  alt="African Print Jewelry Set"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                />
-                <div className="absolute top-4 right-4">
-                  <Button variant="ghost" size="sm" className="bg-white/80 hover:bg-white">
-                    <Heart className="h-4 w-4" />
-                  </Button>
-                </div>
-              </div>
-              <CardContent className="p-6">
-                <div className="space-y-3">
-                  <h3 className="text-lg font-semibold group-hover:text-brand-purple transition-colors">
-                    African Print Jewelry Set
-                  </h3>
-                  <div className="flex items-center space-x-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-brand-yellow text-brand-yellow" />
-                    ))}
-                    <span className="text-sm text-polaris-text-subdued ml-2">(18 reviews)</span>
-                  </div>
-                  <p className="text-polaris-text-subdued text-sm">
-                    Vibrant jewelry set with traditional African patterns and matching pieces
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-xl font-bold text-brand-purple">$125</span>
-                    <Button size="sm" className="bg-brand-purple hover:bg-brand-purple/90">
-                      Add to Cart
-                    </Button>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Product Card 3 */}
-            <Card className="group hover:shadow-xl transition-all duration-300 overflow-hidden">
-              <div className="aspect-square bg-gradient-to-br from-brand-yellow/5 to-brand-green/5 relative overflow-hidden">
-                <img
-                  src="https://cdn.builder.io/api/v1/image/assets%2Fc516c86f7053422db52db417d05f51ea%2Fbabb87800e1443ee89312d6a0a27510e?format=webp&width=800"
-                  alt="Ankara Print Bracelet Collection"
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                />
-                <div className="absolute top-4 right-4">
-                  <Button variant="ghost" size="sm" className="bg-white/80 hover:bg-white">
-                    <Heart className="h-4 w-4" />
-                  </Button>
-                </div>
-              </div>
-              <CardContent className="p-6">
-                <div className="space-y-3">
-                  <h3 className="text-lg font-semibold group-hover:text-brand-purple transition-colors">
-                    Ankara Print Bracelets
-                  </h3>
-                  <div className="flex items-center space-x-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-brand-yellow text-brand-yellow" />
-                    ))}
-                    <span className="text-sm text-polaris-text-subdued ml-2">(31 reviews)</span>
-                  </div>
-                  <p className="text-polaris-text-subdued text-sm">
-                    Handcrafted bracelet collection featuring authentic Ankara prints
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <span className="text-xl font-bold text-brand-purple">$35</span>
-                    <Button size="sm" className="bg-brand-purple hover:bg-brand-purple/90">
-                      Add to Cart
-                    </Button>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+          <ProductGrid products={featuredProducts} columns={3} />
         </div>
       </section>
 
