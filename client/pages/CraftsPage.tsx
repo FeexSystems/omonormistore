@@ -44,11 +44,11 @@ export function CraftsPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-brand-yellow/10 to-brand-green/10 py-16">
+      <section className="bg-gradient-to-r from-brand-success/10 to-brand-primary/10 py-16">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4">
             <div className="flex justify-center mb-4">
-              <div className="w-16 h-16 bg-brand-yellow rounded-full flex items-center justify-center">
+              <div className="w-16 h-16 bg-brand-success rounded-full flex items-center justify-center">
                 <Sparkles className="h-8 w-8 text-white" />
               </div>
             </div>
@@ -59,7 +59,7 @@ export function CraftsPage() {
               Unique accessories and craft items perfect for personal style and gifting. 
               Explore our handmade sandals, matched sets, and custom pieces.
             </p>
-            <Badge className="bg-brand-yellow/10 text-brand-yellow border-brand-yellow/20">
+            <Badge className="bg-brand-success/10 text-brand-success border-brand-success/20">
               {allProducts.length} Products Available
             </Badge>
           </div>
