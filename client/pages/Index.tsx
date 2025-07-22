@@ -209,11 +209,13 @@ export default function Index() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Product Card 1 */}
-            <Card className="group hover:shadow-xl transition-all duration-300">
-              <div className="aspect-square bg-gradient-to-br from-brand-purple/10 to-brand-yellow/10 rounded-t-lg relative overflow-hidden">
-                <div className="absolute inset-0 bg-polaris-surface-subdued flex items-center justify-center">
-                  <ShoppingBag className="h-16 w-16 text-brand-purple/30" />
-                </div>
+            <Card className="group hover:shadow-xl transition-all duration-300 overflow-hidden">
+              <div className="aspect-square bg-gradient-to-br from-brand-purple/5 to-brand-yellow/5 relative overflow-hidden">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fc516c86f7053422db52db417d05f51ea%2Fdfa9fd9873d64a1085ebc7bd2c217a3a?format=webp&width=800"
+                  alt="Traditional Kente Tote Bag"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
                 <div className="absolute top-4 right-4">
                   <Button variant="ghost" size="sm" className="bg-white/80 hover:bg-white">
                     <Heart className="h-4 w-4" />
@@ -223,7 +225,7 @@ export default function Index() {
               <CardContent className="p-6">
                 <div className="space-y-3">
                   <h3 className="text-lg font-semibold group-hover:text-brand-purple transition-colors">
-                    Artisan Tote Bag
+                    Traditional Kente Tote Bag
                   </h3>
                   <div className="flex items-center space-x-1">
                     {[...Array(5)].map((_, i) => (
@@ -232,7 +234,7 @@ export default function Index() {
                     <span className="text-sm text-polaris-text-subdued ml-2">(24 reviews)</span>
                   </div>
                   <p className="text-polaris-text-subdued text-sm">
-                    Handwoven tote bag with traditional patterns and modern functionality
+                    Authentic Kente cloth tote with vibrant patterns and sturdy construction
                   </p>
                   <div className="flex items-center justify-between">
                     <span className="text-xl font-bold text-brand-purple">$89</span>
@@ -245,11 +247,13 @@ export default function Index() {
             </Card>
 
             {/* Product Card 2 */}
-            <Card className="group hover:shadow-xl transition-all duration-300">
-              <div className="aspect-square bg-gradient-to-br from-brand-teal/10 to-brand-orange/10 rounded-t-lg relative overflow-hidden">
-                <div className="absolute inset-0 bg-polaris-surface-subdued flex items-center justify-center">
-                  <Star className="h-16 w-16 text-brand-teal/30" />
-                </div>
+            <Card className="group hover:shadow-xl transition-all duration-300 overflow-hidden">
+              <div className="aspect-square bg-gradient-to-br from-brand-teal/5 to-brand-orange/5 relative overflow-hidden">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fc516c86f7053422db52db417d05f51ea%2F1940a02b2a5e4b1596ce858dfe43ccb9?format=webp&width=800"
+                  alt="African Print Jewelry Set"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
                 <div className="absolute top-4 right-4">
                   <Button variant="ghost" size="sm" className="bg-white/80 hover:bg-white">
                     <Heart className="h-4 w-4" />
@@ -259,7 +263,7 @@ export default function Index() {
               <CardContent className="p-6">
                 <div className="space-y-3">
                   <h3 className="text-lg font-semibold group-hover:text-brand-purple transition-colors">
-                    Elegant Necklace Set
+                    African Print Jewelry Set
                   </h3>
                   <div className="flex items-center space-x-1">
                     {[...Array(5)].map((_, i) => (
@@ -268,7 +272,7 @@ export default function Index() {
                     <span className="text-sm text-polaris-text-subdued ml-2">(18 reviews)</span>
                   </div>
                   <p className="text-polaris-text-subdued text-sm">
-                    Beautifully crafted jewelry set with matching earrings
+                    Vibrant jewelry set with traditional African patterns and matching pieces
                   </p>
                   <div className="flex items-center justify-between">
                     <span className="text-xl font-bold text-brand-purple">$125</span>
@@ -281,11 +285,13 @@ export default function Index() {
             </Card>
 
             {/* Product Card 3 */}
-            <Card className="group hover:shadow-xl transition-all duration-300">
-              <div className="aspect-square bg-gradient-to-br from-brand-yellow/10 to-brand-green/10 rounded-t-lg relative overflow-hidden">
-                <div className="absolute inset-0 bg-polaris-surface-subdued flex items-center justify-center">
-                  <Heart className="h-16 w-16 text-brand-yellow/30" />
-                </div>
+            <Card className="group hover:shadow-xl transition-all duration-300 overflow-hidden">
+              <div className="aspect-square bg-gradient-to-br from-brand-yellow/5 to-brand-green/5 relative overflow-hidden">
+                <img
+                  src="https://cdn.builder.io/api/v1/image/assets%2Fc516c86f7053422db52db417d05f51ea%2Fbabb87800e1443ee89312d6a0a27510e?format=webp&width=800"
+                  alt="Ankara Print Bracelet Collection"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
                 <div className="absolute top-4 right-4">
                   <Button variant="ghost" size="sm" className="bg-white/80 hover:bg-white">
                     <Heart className="h-4 w-4" />
@@ -295,7 +301,7 @@ export default function Index() {
               <CardContent className="p-6">
                 <div className="space-y-3">
                   <h3 className="text-lg font-semibold group-hover:text-brand-purple transition-colors">
-                    Signature Perfume
+                    Ankara Print Bracelets
                   </h3>
                   <div className="flex items-center space-x-1">
                     {[...Array(5)].map((_, i) => (
@@ -304,10 +310,10 @@ export default function Index() {
                     <span className="text-sm text-polaris-text-subdued ml-2">(31 reviews)</span>
                   </div>
                   <p className="text-polaris-text-subdued text-sm">
-                    Exclusive fragrance blend with notes of jasmine and sandalwood
+                    Handcrafted bracelet collection featuring authentic Ankara prints
                   </p>
                   <div className="flex items-center justify-between">
-                    <span className="text-xl font-bold text-brand-purple">$65</span>
+                    <span className="text-xl font-bold text-brand-purple">$35</span>
                     <Button size="sm" className="bg-brand-purple hover:bg-brand-purple/90">
                       Add to Cart
                     </Button>
