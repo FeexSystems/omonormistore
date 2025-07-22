@@ -44,11 +44,11 @@ export function JewelryPage() {
       <Header />
       
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-brand-orange/10 to-brand-yellow/10 py-16">
+      <section className="bg-gradient-to-r from-brand-secondary/10 to-brand-success/10 py-16">
         <div className="container mx-auto px-4">
           <div className="text-center space-y-4">
             <div className="flex justify-center mb-4">
-              <div className="w-16 h-16 bg-brand-orange rounded-full flex items-center justify-center">
+              <div className="w-16 h-16 bg-brand-secondary rounded-full flex items-center justify-center">
                 <Star className="h-8 w-8 text-white" />
               </div>
             </div>
@@ -59,7 +59,7 @@ export function JewelryPage() {
               Exquisite handcrafted jewelry pieces that make a statement. 
               Each piece features authentic African patterns and traditional craftsmanship.
             </p>
-            <Badge className="bg-brand-orange/10 text-brand-orange border-brand-orange/20">
+            <Badge className="bg-brand-secondary/10 text-brand-secondary border-brand-secondary/20">
               {allProducts.length} Products Available
             </Badge>
           </div>
