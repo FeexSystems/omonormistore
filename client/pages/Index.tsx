@@ -60,14 +60,37 @@ export default function Index() {
               </div>
             </div>
 
-            {/* Hero Image */}
+            {/* Hero Visual */}
             <div className="relative">
-              <div className="aspect-square rounded-2xl bg-gradient-to-br from-brand-yellow/20 to-brand-teal/20 p-8">
-                <img 
-                  src="https://cdn.builder.io/api/v1/assets/c516c86f7053422db52db417d05f51ea/whatsapp-image-2025-07-19-at-14.28.37_e71ee3a2-5a8366?format=webp&width=800" 
-                  alt="OMONORMI Handcrafted Bags and Accessories" 
-                  className="w-full h-full object-cover rounded-xl shadow-2xl"
-                />
+              <div className="grid grid-cols-2 gap-4">
+                <div className="aspect-square rounded-2xl bg-gradient-to-br from-brand-purple/10 to-brand-teal/10 p-4 group hover:scale-105 transition-transform duration-300">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2Fc516c86f7053422db52db417d05f51ea%2F67e193a261b4429a82b2bb782814a7be?format=webp&width=800"
+                    alt="OMONORMI Handcrafted Bags"
+                    className="w-full h-full object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-shadow duration-300"
+                  />
+                </div>
+                <div className="aspect-square rounded-2xl bg-gradient-to-br from-brand-yellow/10 to-brand-orange/10 p-4 group hover:scale-105 transition-transform duration-300">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2Fc516c86f7053422db52db417d05f51ea%2F3d721a5b7a6d4a20894e4dab7f24b55d?format=webp&width=800"
+                    alt="OMONORMI Jewelry Collection"
+                    className="w-full h-full object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-shadow duration-300"
+                  />
+                </div>
+                <div className="aspect-square rounded-2xl bg-gradient-to-br from-brand-green/10 to-brand-teal/10 p-4 group hover:scale-105 transition-transform duration-300">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2Fc516c86f7053422db52db417d05f51ea%2F93ac2510564146718a74c51c9242ffc2?format=webp&width=800"
+                    alt="OMONORMI Crafted Accessories"
+                    className="w-full h-full object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-shadow duration-300"
+                  />
+                </div>
+                <div className="aspect-square rounded-2xl bg-gradient-to-br from-brand-orange/10 to-brand-purple/10 p-4 group hover:scale-105 transition-transform duration-300">
+                  <img
+                    src="https://cdn.builder.io/api/v1/image/assets%2Fc516c86f7053422db52db417d05f51ea%2F650804637df242968d88be38a2c2fdae?format=webp&width=800"
+                    alt="OMONORMI Traditional Patterns"
+                    className="w-full h-full object-cover rounded-lg shadow-lg group-hover:shadow-xl transition-shadow duration-300"
+                  />
+                </div>
               </div>
               <div className="absolute -top-4 -right-4 bg-brand-yellow text-white p-3 rounded-full shadow-lg">
                 <Sparkles className="h-6 w-6" />
