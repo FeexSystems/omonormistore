@@ -4,9 +4,12 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Logo } from "./Logo";
 import { useCart } from "@/contexts/CartContext";
+import { SearchDialog } from "./SearchDialog";
+import { useState } from "react";
 
 export function Header() {
   const { toggleCart, getTotalItems } = useCart();
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   return (
     <header className="bg-white border-b border-polaris-divider sticky top-0 z-50">
@@ -74,16 +77,22 @@ export function Header() {
                 <Input
                   type="search"
                   placeholder="Search products..."
-                  className="pl-10 pr-4 py-2 w-full border-polaris-divider focus:border-brand-purple focus:ring-brand-purple"
+                  className="pl-10 pr-4 py-2 w-full border-polaris-divider focus:border-brand-purple focus:ring-brand-purple cursor-pointer"
+                  onClick={() => setIsSearchOpen(true)}
+                  readOnly
                 />
               </div>
             </div>
 
             {/* Right side icons */}
             <div className="flex items-center space-x-4">
-              <Button variant="ghost" size="sm" className="hidden md:flex">
-                <Search className="h-5 w-5 md:hidden" />
-                <span className="hidden md:block">Search</span>
+              <Button
+                variant="ghost"
+                size="sm"
+                className="md:hidden"
+                onClick={() => setIsSearchOpen(true)}
+              >
+                <Search className="h-5 w-5" />
               </Button>
               
               <Button variant="ghost" size="sm">
@@ -121,7 +130,9 @@ export function Header() {
             <Input
               type="search"
               placeholder="Search products..."
-              className="pl-10 pr-4 py-2 w-full border-polaris-divider focus:border-brand-purple focus:ring-brand-purple"
+              className="pl-10 pr-4 py-2 w-full border-polaris-divider focus:border-brand-purple focus:ring-brand-purple cursor-pointer"
+              onClick={() => setIsSearchOpen(true)}
+              readOnly
             />
           </div>
         </div>
@@ -156,6 +167,11 @@ export function Header() {
           </div>
         </nav>
       </div>
+
+      <SearchDialog
+        open={isSearchOpen}
+        onOpenChange={setIsSearchOpen}
+      />
     </header>
   );
 }
