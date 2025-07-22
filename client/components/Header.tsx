@@ -3,8 +3,11 @@ import { ShoppingBag, Search, User, Menu, Heart } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Logo } from "./Logo";
+import { useCart } from "@/contexts/CartContext";
 
 export function Header() {
+  const { toggleCart, getTotalItems } = useCart();
+
   return (
     <header className="bg-white border-b border-polaris-divider sticky top-0 z-50">
       <div className="container mx-auto px-4">
@@ -93,12 +96,19 @@ export function Header() {
                 <span className="hidden md:block ml-2">Account</span>
               </Button>
               
-              <Button variant="ghost" size="sm" className="relative">
+              <Button
+                variant="ghost"
+                size="sm"
+                className="relative"
+                onClick={toggleCart}
+              >
                 <ShoppingBag className="h-5 w-5" />
                 <span className="hidden md:block ml-2">Cart</span>
-                <span className="absolute -top-1 -right-1 bg-brand-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
-                  0
-                </span>
+                {getTotalItems() > 0 && (
+                  <span className="absolute -top-1 -right-1 bg-brand-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                    {getTotalItems()}
+                  </span>
+                )}
               </Button>
             </div>
           </div>
