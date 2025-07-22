@@ -4,11 +4,13 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Logo } from "./Logo";
 import { useCart } from "@/contexts/CartContext";
+import { useWishlist } from "@/contexts/WishlistContext";
 import { SearchDialog } from "./SearchDialog";
 import { useState } from "react";
 
 export function Header() {
   const { toggleCart, getTotalItems } = useCart();
+  const { toggleWishlist, getTotalItems: getWishlistItems } = useWishlist();
   const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   return (
@@ -95,9 +97,19 @@ export function Header() {
                 <Search className="h-5 w-5" />
               </Button>
               
-              <Button variant="ghost" size="sm">
+              <Button
+                variant="ghost"
+                size="sm"
+                className="relative"
+                onClick={toggleWishlist}
+              >
                 <Heart className="h-5 w-5" />
                 <span className="hidden md:block ml-2">Wishlist</span>
+                {getWishlistItems() > 0 && (
+                  <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+                    {getWishlistItems()}
+                  </span>
+                )}
               </Button>
               
               <Button variant="ghost" size="sm">
