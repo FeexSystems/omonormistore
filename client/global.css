@@ -66,48 +66,48 @@
   }
 
   .dark {
-    --background: 26 29 33;
-    --foreground: 244 245 247;
+    --background: 15 23 42;
+    --foreground: 248 250 252;
 
-    --card: 33 39 46;
-    --card-foreground: 244 245 247;
+    --card: 30 41 59;
+    --card-foreground: 248 250 252;
 
-    --popover: 33 39 46;
-    --popover-foreground: 244 245 247;
+    --popover: 30 41 59;
+    --popover-foreground: 248 250 252;
 
-    --primary: 165 68 180;
-    --primary-foreground: 255 255 255;
+    --primary: 129 140 248;
+    --primary-foreground: 15 23 42;
 
-    --secondary: 41 47 54;
-    --secondary-foreground: 244 245 247;
+    --secondary: 51 65 85;
+    --secondary-foreground: 248 250 252;
 
-    --muted: 41 47 54;
-    --muted-foreground: 157 157 157;
+    --muted: 51 65 85;
+    --muted-foreground: 148 163 184;
 
-    --accent: 41 47 54;
-    --accent-foreground: 244 245 247;
+    --accent: 51 65 85;
+    --accent-foreground: 248 250 252;
 
-    --destructive: 229 70 102;
-    --destructive-foreground: 255 255 255;
+    --destructive: 248 113 113;
+    --destructive-foreground: 15 23 42;
 
-    --border: 41 47 54;
-    --input: 41 47 54;
-    --ring: 165 68 180;
+    --border: 51 65 85;
+    --input: 51 65 85;
+    --ring: 129 140 248;
 
     /* OMONORMI Brand Colors - Dark Mode */
-    --brand-purple: 165 68 180;
-    --brand-yellow: 45 93% 70%;
-    --brand-green: 142 69% 50%;
-    --brand-orange: 25 85% 65%;
-    --brand-teal: 173 58% 55%;
+    --brand-purple: 129 140 248;
+    --brand-yellow: 253 224 71;
+    --brand-green: 74 222 128;
+    --brand-orange: 251 146 60;
+    --brand-teal: 45 212 191;
 
     /* Shopify Polaris Dark Theme */
-    --polaris-surface: 33 39 46;
-    --polaris-surface-hovered: 41 47 54;
-    --polaris-surface-pressed: 49 55 62;
-    --polaris-surface-subdued: 26 29 33;
-    --polaris-text-subdued: 157 157 157;
-    --polaris-divider: 62 68 75;
+    --polaris-surface: 30 41 59;
+    --polaris-surface-hovered: 51 65 85;
+    --polaris-surface-pressed: 71 85 105;
+    --polaris-surface-subdued: 15 23 42;
+    --polaris-text-subdued: 148 163 184;
+    --polaris-divider: 71 85 105;
 
     --sidebar-background: 33 39 46;
     --sidebar-foreground: 244 245 247;
